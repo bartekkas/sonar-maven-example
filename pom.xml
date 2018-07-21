@@ -45,7 +45,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>2.21.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -62,4 +62,16 @@
       </plugins>
     </pluginManagement>
   </build>
+  <distributionManagement>
+      <repository>
+          <id>deployment</id>
+          <name>Internal Releases</name>
+          <url>http://172.17.0.4:8081/repository/Release/</url>
+      </repository>
+      <snapshotRepository>
+          <id>deployment</id>
+          <name>Internal Snapshot Release</name>
+          <url>http://172.17.0.4:8081/repository/Snapshot/</url>
+      </snapshotRepository>
+  </distributionManagement>
 </project>
